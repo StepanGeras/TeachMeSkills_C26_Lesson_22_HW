@@ -23,7 +23,7 @@ public class OperationHttpHandler implements HttpHandler {
 		Map<String, String> mapParameters = new HashMap<>();
 
         for (String s : parameters) {
-            String parameter = s.substring(s.length() - 1);
+            String parameter = s.substring(5, s.length());
             String key = s.substring(0, 4);
             mapParameters.put(key, parameter);
         }
