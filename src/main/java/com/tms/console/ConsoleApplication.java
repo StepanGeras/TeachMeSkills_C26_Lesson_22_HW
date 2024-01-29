@@ -19,6 +19,12 @@ public class ConsoleApplication implements Application {
 			double num1 = consoleReader.readNum();
 			consoleWriter.write("Enter num 2");
 			double num2 = consoleReader.readNum();
+			while (num2 == 0) {
+
+				consoleWriter.write("Error");
+				num2 = consoleReader.readNum();
+
+			}
 			consoleWriter.write("Enter operation");
 			String type = consoleReader.readOperationType();
 			Operation operation = new Operation(num1, num2, type);
